@@ -1,13 +1,13 @@
 import './App.css';
-import Navbar from './components/Navbar';
-import TextForm from './components/TextForm';
-import About from './components/About';
+import Navbar from './Components/Navbar';
+import TextForm from './Components/TextForm';
+import About from './Components/About';
 import React, { useState } from 'react';
-import Alert from './components/Alert';
+import Alert from './Components/Alert';
 import {
   HashRouter as Router,
   Routes,
-  Route,Link
+  Route
 } from "react-router-dom";
 
  
@@ -46,10 +46,10 @@ function App() {
     <Routes>
     {/* /users --> Component 1
         /users/home --> Component 2 */}
-          <Route exact path="/about" element="About mode={mode} "/>
+          <Route exact path="/about" element={<About mode={mode}/>} />
             
           </Route>
-          <Route exact path="/"element ="TextForm showAlert={showAlert} heading="Try TextUtils - word counter, character counter, remove extra spaces" mode={mode}"/>
+          <Route exact path="/"element ={<TextForm showAlert={showAlert}  mode={mode}/>}/>
           </Route>
           
     </Routes>
