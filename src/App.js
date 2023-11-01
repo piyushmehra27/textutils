@@ -48,9 +48,9 @@ function App() {
         /users/home --> Component 2 */}
           <Route exact path="/about" element={<About mode={mode}/>} />
             
-          </Route>
+          
           <Route exact path="/"element ={<TextForm showAlert={showAlert}  mode={mode}/>}/>
-          </Route>
+          
           
     </Routes>
     </div>
